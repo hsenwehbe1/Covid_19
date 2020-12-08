@@ -3,6 +3,7 @@ package com.example.covid_19
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.util.Log
 import android.widget.TextView
 
 class DisplayConnectorsActivity : AppCompatActivity() {
@@ -11,11 +12,17 @@ class DisplayConnectorsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_connectors)
 
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
+        val message = intent.getStringArrayExtra("strings")
+        var result=""
+        for(i in message.indices){
+            val elementArray = message[i].split("#").toTypedArray()
+            for(j in elementArray.indices){
+                if(j==elementArray.size-1) result= result+elementArray[j]+"\n" else result= result+elementArray[j]+" "
+            }
+        }
 
-        // Capture the layout's TextView and set the string as its text
         val textView = findViewById<TextView>(R.id.scanArray).apply {
-            text = message
+            text = "/n"+result
         }
     }
 }

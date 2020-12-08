@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayConnectorsActivity">
+    tools:context=".DisplayConnectorsActivity"
+    android:background="#5b39c6">
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +17,8 @@
         android:layout_marginTop="275dp"
         android:layout_marginEnd="137dp"
         android:text="list of people"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"/>
 
     <TextView
         android:id="@+id/scanArray"
