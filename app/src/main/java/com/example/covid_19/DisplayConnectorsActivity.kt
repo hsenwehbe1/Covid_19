@@ -13,16 +13,17 @@ class DisplayConnectorsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_display_connectors)
 
         val message = intent.getStringArrayExtra("strings")
-        var result=""
+        var APs = ""
         for(i in message.indices){
             val elementArray = message[i].split("#").toTypedArray()
             for(j in elementArray.indices){
-                if(j==elementArray.size-1) result= result+elementArray[j]+"\n" else result= result+elementArray[j]+" "
+                if(j==elementArray.size-1) APs= APs+elementArray[j]+"\n" else APs= APs+elementArray[j]+" "
             }
         }
+        //know we have list of APs
 
         val textView = findViewById<TextView>(R.id.scanArray).apply {
-            text = "/n"+result
+            text = "/n"+APs
         }
     }
 }

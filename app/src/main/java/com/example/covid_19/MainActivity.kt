@@ -82,7 +82,8 @@ class MainActivity : AppCompatActivity() {
         val Btn_clicked = findViewById<Button>(R.id.get_access)
         val Admin_Btn_clicked = findViewById<Button>(R.id.get_admin)
         Admin_Btn_clicked.setOnClickListener {
-
+            val intent = Intent(this,AdminActivity::class.java)
+            startActivity(intent)
         }
         Btn_clicked.setOnClickListener {
             //first we need to get the list of devices from each access point
