@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 //        ... potentially use older scan results ...
         }
         val Btn_clicked = findViewById<Button>(R.id.get_access)
-        val Admin_Btn_clicked = findViewById<Button>(R.id.get_admin)
+        val Admin_Btn_clicked = findViewById<Button>(R.id.create_column)
         Admin_Btn_clicked.setOnClickListener {
             val intent = Intent(this,AdminActivity::class.java)
             startActivity(intent)
